@@ -39,5 +39,3 @@ window.addEventListener("scroll", function () {
   }
 });
 
-///sdsdsdsdsm jsdjs d
-// this is 

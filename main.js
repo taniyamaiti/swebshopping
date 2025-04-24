@@ -17,6 +17,6 @@ document.querySelectorAll('.toggle-form').forEach((toggle) => {
         } else if (target === 'login') {
             document.querySelector('.user.signup').classList.remove('active');
             document.querySelector('.user.login').classList.add('active');
-        }
-    });
+        }
+    });
 });
