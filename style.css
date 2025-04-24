@@ -294,7 +294,7 @@ del{
     position:absolute ;
      left:0;
      right:0;
-     top:98%;
+     top:96%;
      transform:translate(10px);
      opacity: 0;
      visibility: hidden;
@@ -353,9 +353,27 @@ background-repeat: no-repeat;
     color:#6e6e6e;
     line-height: 3.5rem;
 }
-
-
-
+.box{
+    flex:1;
+    text-align: center;
+    margin-block:1rem;
+}
+.box.fa-solid{
+    font-size:1.5rem;
+    color:var(--primary-clr)
+}
+h5 a{
+    font-size: 1.1rem;
+    color:var(--light-black);
+    
+    font-weight:500;
+    line-height:2rem;
+}
+.des{
+    color:#6e6e6e;
+    font-size:.9rem;
+    font-weight:400;
+}
 
 /* Footer Styles */
 .footer {
@@ -529,8 +547,6 @@ background-repeat: no-repeat;
     color: #000;
 }
 
-
-
 /* contact Modal Styles */
 .modal {
     display: none; /* Hidden by default */
@@ -600,6 +616,9 @@ background-repeat: no-repeat;
   .btn:hover {
     background-color: #0056b3;
   }
+color: #000;
+}
+
 
   /* About Section */
 .about-section {
