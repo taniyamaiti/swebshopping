@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar flex container">
+            <a href="index.html" class="logo">T&S<span>Emporium</span></a>
+            <ul class="navlist flex">
+                <li><a href="index.html" class="link">Home</a></li>
+                <li><a href="index.html" class="link">Shop</a></li>
+                <li><a href="page.html" class="link">Page</a></li>
+                <li><a href="contact.html" class="link contact-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Cart Section -->
+    <main>
+        <div class="small-container cart-page" style="padding-top: 100px; width: 1000px;">
+            <table>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cart-info">
+                    <img src="./images/product_1.png" alt="Product 1" />
+                    <div>
+                      <p>Red Printed T-shirt</p>
+                      <small>Price: ₹500.00</small>
+                      <br />
+                      <a href="#">Remove</a>
+                    </div>
+                  </div>
+                </td>
+                <td><input type="number" value="1" class="quantity" data-price="500" /></td>
+                <td class="subtotal">₹500.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cart-info">
+                    <img src="./images/product_4.png" alt="Product 4" />
+                    <div>
+                      <p>Blue Printed T-shirt</p>
+                      <small>Price: ₹6000.00</small>
+                      <br />
+                      <a href="#">Remove</a>
+                    </div>
+                  </div>
+                </td>
+                <td><input type="number" value="1" class="quantity" data-price="6000" /></td>
+                <td class="subtotal">₹6000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cart-info">
+                    <img src="./images/product_3.png" alt="Product 3" />
+                    <div>
+                      <p>Green Printed T-shirt</p>
+                      <small>Price: ₹7999.00</small>
+                      <br />
+                      <a href="#">Remove</a>
+                    </div>
+                  </div>
+                </td>
+                <td><input type="number" value="1" class="quantity" data-price="7999" /></td>
+                <td class="subtotal">₹70.00</td>
+              </tr>
+            </table>
+
+            <div class="total-price">
+              <table>
+                <tr>
+                  <td>Subtotal</td>
+                  <td>₹0.00</td>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <td>₹0.00</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>₹0.00</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container flex">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>Welcome to T&S Emporium, your one-stop shop for the latest fashion trends and accessories.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#best-sale">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 T&S Emporium. All Rights Reserved.</p>
+        </div>
+     </footer>
+
+    <!-- Dynamic Cart Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function updateCart() {
+                const quantityInputs = document.querySelectorAll('.quantity');
+                let cartSubtotal = 0;
+
+                quantityInputs.forEach(input => {
+                    const price = parseFloat(input.dataset.price);
+                    const quantity = parseInt(input.value);
+                    const subtotal = price * quantity;
+
+                    const row = input.closest('tr');
+                    const subtotalCell = row.querySelector('.subtotal');
+                    subtotalCell.textContent = `₹${subtotal.toFixed(2)}`;
+
+                    cartSubtotal += subtotal;
+                });
+
+                const tax = cartSubtotal * 0.15;
+                const total = cartSubtotal + tax;
+
+                const totalPriceTable = document.querySelector('.total-price table');
+                const subtotalCell = totalPriceTable.rows[0].cells[1];
+                const taxCell = totalPriceTable.rows[1].cells[1];
+                const totalCell = totalPriceTable.rows[2].cells[1];
+
+                subtotalCell.textContent = `₹${cartSubtotal.toFixed(2)}`;
+                taxCell.textContent = `₹${tax.toFixed(2)}`;
+                totalCell.textContent = `₹${total.toFixed(2)}`;
+            }
+
+            document.querySelectorAll('.quantity').forEach(input => {
+                input.addEventListener('input', updateCart);
+            });
+
+            updateCart();
+        });
+    </script>
+</body>
+</html>

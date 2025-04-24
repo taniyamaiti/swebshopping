@@ -6,41 +6,28 @@
     <title>Shopping Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"href="style.css">
-    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-
-  <!-- 
-    - google font link
-  -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet"> -->
-
-  <!-- 
-    - preload banner
-  -->
-  <!-- <link rel="preload" href="./assets/images/hero-banner.png" as="image"> -->
 </head>
 <body>
     <!-- Navbar hear -->
-    <header>
+   <header>
       <nav class="navbar flex container">
-          <a href="#" class="logo">T&S<span>Emporium</span></a>
-          <ul class="navlist flex">
-              <li><a href="#" class="link link-a">Home</a></li>
-              <li><a href="#best-sale" class="link">Shop</a></li>
-              <li><a href="page.html" class="link page-link">Page</a></li>
-              <li><a href="contact.html" class="link contact-link">Contact</a></li>
-              <li class="nav-icons flex">
-                  <a href="#" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                  <a href="#" class="icon"><i class="fa-solid fa-user login-btn"></i></a>
-                  <a href="#" class="icon icon-active"><i class="fa-solid fa-shopping-bag"></i></a>
-              </li>
-          </ul>
-          <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+         <a href="#" class="logo">T&S<span>Emporium</span></a>
+         <ul class="navlist flex">
+            <li><a href="#" class="link link-a">Home</a></li>
+            <li><a href="#best-sale" class="link">Shop</a></li>
+            <li><a href="page.html" class="link page-link">Page</a></li>
+            <li><a href="contact.html" class="link contact-link">Contact</a></li>
+            <li class="nav-icons flex">
+               <a href="#" class="icon" id="searchToggle"><i class="fa-solid fa-magnifying-glass"></i></a>
+               <input type="text" id="searchBox" placeholder="Search..." style="display:none; margin-left: 10px;" />
+               <span id="matchCount" style="margin-left: 10px; font-weight: bold;"></span>
+               <a href="#" class="icon"><i class="fa-solid fa-user login-btn"></i></a>
+               <a href="cart.html" class="icon icon-active"><i class="fa-solid fa-shopping-bag"></i></a>
+            </li>
+         </ul>
+         <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
       </nav>
-  </header>
+   </header>
 <!-- sections Hear -->
 <main>
    <section class="hero ">
@@ -49,25 +36,11 @@
       <h3>Summer Fashion</h3>
       <h1>New Collection</h1>
       <h4>big sale of this week up to <span>50%</span></h4>
-       <button class="btn">shop Now</button> 
+       <a href="#best-sale"><button class="btn logo-btn">shop Now</button> </a>
    </div>
   </div>
 </section>
-<!-- <section class="section">
-   <div class="category-container container">
-      <div class="category">
-         <img src="images/for men.jpg">
-         <button>for men</button>
-      </div>
-      <div class="category">
-         <img src="images/for Accessories.jpg">
-         <button>Accessories</button>
-      </div><div class="category">
-         <img src="images/for women.jpg">
-         <button>for women</button>
-      </div>
-       </div>
-</section> -->
+
 
 
 <!-- second section -->
@@ -118,10 +91,7 @@
    </div>
  </section>
 
- <!-- 3rd section -->
-
-
-<!-- 3rd section -->
+ <!-- 3rd section -->   
 
 
 <section class="section"> 
@@ -181,20 +151,6 @@
             <button class="add-to-cart">Add to cart</button>
          </div>
          </div>
-
-         <!-- <div class="card new">
-            <img src="images/">
-            <div class="card-content">
-               <p class="title">
-                  Leather black handbag Out Edition
-               </p>
-               <div>
-                  
-                  <span class="amount">₹100.00</span>
-               </div>
-               <button class="add-to-cart">Add to cart</button>
-            </div>
-            </div> -->
   </div>
    </div>
 </section>
@@ -207,7 +163,7 @@
 <h3>New Trend 2025</h3>
 <h1>Women's Collection</h1>
 <div class="">
-   <img src="images/woman.webp" alt="" style="height: 800px; width: auto;">
+   <img src="images/Women.jpg" alt="" style="height: 800px; width: auto;">
 </div>
 <h4>Big sale of this week</h4>
 <button>Shop Now</button>
@@ -216,7 +172,7 @@
 <!-- commet
   -->
   <section class="section" id="best-sale">
-   <div class="container">
+   <div class="container" style="padding-top: 20px;">
 <h2>Best Sale</h2>
 <div class="line"></div>
 
@@ -274,19 +230,6 @@
             </div>
             </div>
    
-            <!-- <div class="card new">
-               <img src="images/">
-               <div class="card-content">
-                  <p class="title">
-                     Leather black handbag Out Edition
-                  </p>
-                  <div>
-                     
-                     <span class="amount">₹100.00</span>
-                  </div>
-                  <button class="add-to-cart">Add to cart</button>
-               </div>
-               </div> -->
      </div>
      <div class="card-container flex wrap">
       <div class="card sale">
@@ -341,20 +284,6 @@
                   <button class="add-to-cart">Add to cart</button>
                </div>
                </div>
-      
-               <!-- <div class="card new">
-                  <img src="images/">
-                  <div class="card-content">
-                     <p class="title">
-                        Leather black handbag Out Edition
-                     </p>
-                     <div>
-                        
-                        <span class="amount">₹100.00</span>
-                     </div>
-                     <button class="add-to-cart">Add to cart</button>
-                  </div>
-                  </div> -->
         </div>
 
    </div>
@@ -495,5 +424,77 @@
    </div>
 </div>
   <script src="main.js"></script> 
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+     const toggle = document.getElementById('searchToggle');
+     const searchBox = document.getElementById('searchBox');
+     const matchCount = document.getElementById('matchCount');
+ 
+     let previousMatches = [];
+     let currentMatchIndex = -1;
+ 
+     toggle.addEventListener('click', (e) => {
+       e.preventDefault();
+       const isVisible = searchBox.style.display === 'inline-block';
+       searchBox.style.display = isVisible ? 'none' : 'inline-block';
+       matchCount.innerText = '';
+       clearHighlights();
+ 
+       if (!isVisible) {
+         searchBox.value = '';
+         searchBox.focus();
+       }
+     });
+ 
+     searchBox.addEventListener('keydown', (e) => {
+       if (e.key === 'Enter') {
+         const query = searchBox.value.trim().toLowerCase();
+ 
+         if (!query) return;
+ 
+         // First enter — gather matches
+         if (previousMatches.length === 0) {
+           const elements = Array.from(document.body.querySelectorAll('*'))
+             .filter(el => el.children.length === 0 && el.innerText.toLowerCase().includes(query));
+ 
+           if (elements.length === 0) {
+             matchCount.innerText = 'No matches found!';
+             return;
+           }
+ 
+           previousMatches = elements;
+           currentMatchIndex = 0;
+ 
+           elements.forEach(el => el.style.background = '#ffff99');
+           matchCount.innerText = `${elements.length} match${elements.length > 1 ? 'es' : ''} found`;
+         } else {
+           // Loop through matches
+           currentMatchIndex = (currentMatchIndex + 1) % previousMatches.length;
+         }
+ 
+         const el = previousMatches[currentMatchIndex];
+         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+         el.style.outline = '2px solid orange';
+ 
+         // Optional: remove outline from previous element
+         previousMatches.forEach((item, idx) => {
+           if (idx !== currentMatchIndex) item.style.outline = 'none';
+         });
+       }
+     });
+ 
+     function clearHighlights() {
+       previousMatches.forEach(el => {
+         el.style.background = '';
+         el.style.outline = 'none';
+       });
+       previousMatches = [];
+       currentMatchIndex = -1;
+     }
+   });
+ </script>
+ 
+ 
+ 
 </body>
 </html>
