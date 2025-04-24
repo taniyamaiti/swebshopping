@@ -112,7 +112,22 @@ span,
 .hamburger{
     font-size:1.7rem;
     color:var(--primary-clr);
+    display: none;
 }
+  
+  /* Show hamburger menu on mobile devices */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: inline-block;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  
+    /* Hide the regular navbar on mobile */
+    .navlist {
+      display: none;
+    }
+  }
 
 /* sections Styling */
 .hero{
@@ -377,7 +392,7 @@ h5 a{
 
 /* Footer Styles */
 .footer {
-    background-color: #c2b075;
+    background-color: #b9a977;
     color: #fff;
     padding: 20px 0;
     font-size: 14px;
@@ -616,8 +631,6 @@ h5 a{
   .btn:hover {
     background-color: #0056b3;
   }
-color: #000;
-}
 
 
   /* About Section */
@@ -644,51 +657,71 @@ color: #000;
     margin-top: 30px;
     margin-bottom: 15px;
 }
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
+/* Cart Items Details */
+.cart-page {
+  margin: 30px auto;
 }
 
-.footer .container {
-    display: flex;
-    justify-content: space-between;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.footer-about, .footer-links, .footer-social {
-    width: 30%;
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
+th {
+  text-align: left;
+  padding: 5px;
+  color: var(--main-bg-color);
+  background: var(--accent-color);
+  font-weight: normal;
 }
 
-.footer-links ul li {
-    margin-bottom: 10px;
+td {
+  padding: 10px 5px;
 }
 
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
 }
 
-.footer-social ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+td a {
+  color: var(--accent-color);
+  font-size: 12px;
 }
 
-.footer-social ul li a {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
 }
 
-.footer-bottom {
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid var(--accent-color);
+  width: 100%;
+  max-width: 400px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+
+.quantity {
+    width: 50px;
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
+  }
+  
