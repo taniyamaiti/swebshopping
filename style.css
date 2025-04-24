@@ -600,3 +600,76 @@ background-repeat: no-repeat;
   .btn:hover {
     background-color: #0056b3;
   }
+
+  /* About Section */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-about, .footer-links, .footer-social {
+    width: 30%;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
